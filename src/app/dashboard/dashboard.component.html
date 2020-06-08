@@ -1,0 +1,50 @@
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <app-filter (filterEvent)="filterRecordByCountryEvent($event)" (filterChartEvent)="showHideChart($event)"></app-filter>
+    </div>
+    <div class="col-sm-7 text-left" *ngIf="(dashboard | json) != '{}'">
+      <app-table [tableData]="dashboard" *ngIf="isTableVisible"></app-table>
+      <app-piechart [pieData]="dashboard" *ngIf="isPieChartVisible"></app-piechart>
+      <app-linechart [columnData]="dashboard" *ngIf="isColumnChartVisible"></app-linechart>
+    </div>
+    <div class="col-sm-3 sidenav">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card-counter danger">
+            <i class="fa fa-users"></i>
+            <span class="count-numbers">{{ dashboard.deaths }}</span>
+            <span class="count-name">Deaths</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card-counter primary">
+            <i class="fa fa-users"></i>
+            <span class="count-numbers">{{ dashboard.active }}</span>
+            <span class="count-name">Active</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card-counter success">
+            <i class="fa fa-users"></i>
+            <span class="count-numbers">{{ dashboard.recovered }}</span>
+            <span class="count-name">Recovered</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card-counter info">
+            <i class="fa fa-users"></i>
+            <span class="count-numbers">{{ dashboard.confirmed }}</span>
+            <span class="count-name">Confirmed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

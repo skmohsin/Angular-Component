@@ -1,0 +1,29 @@
+<table class="table table-bordered table-hover table-condensed">
+  <thead>
+    <th>Country</th>
+    <th>Deaths</th>
+    <th>Active</th>
+    <th>Recovered</th>
+    <th>Confirmed</th>
+    <th>Status</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ tableData.country }}</td>
+      <td>{{ tableData.deaths }}</td>
+      <td>{{ tableData.active }}</td>
+      <td>{{ tableData.recovered }}</td>
+      <td>{{ tableData.confirmed }}</td>
+      <td>
+        <select class="form-control"  [(ngModel)]="status" (change)="getCountryDetails(status)">
+          <option value="confirmed">Confirmed</option>
+          <option value="recovered">Recovered</option>
+          <option value="active">Active</option>
+          <option value="deaths">Death</option>
+        </select>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<app-tabledetails [tableDetails]="countryData"></app-tabledetails>

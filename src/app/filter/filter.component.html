@@ -1,0 +1,14 @@
+<!-- https://fireship.io/lessons/sharing-data-between-angular-components-four-methods/ -->
+    <h5 style="text-align: left;">Filter By Country:</h5>
+    <select class="form-control" (change)="filterByCountry()" [(ngModel)]="country">
+      <option selected>Select Country</option>
+      <option value="india">India</option>
+      <option value="pakistan">Pakistan</option>
+    </select>
+    <h5 style="text-align: left;">Change Chart Type:</h5>
+    <select class="form-control" (change)="showHideChart()" [(ngModel)]="chartToVisible">
+      <option selected>Select Country</option>
+      <option value="table">Table</option>
+      <option value="column">Column</option>
+      <option value="pie">Pie</option>
+    </select>

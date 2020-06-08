@@ -1,0 +1,19 @@
+<table class="table table-bordered table-hover table-condensed">
+    <thead>
+      <th>Country</th>
+      <th>Code</th>
+      <th>Lat</th>
+      <th>Lon</th>
+      <th>Cases</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of tableDetails">
+        <td>{{c.country}}</td>
+        <td>{{c.countryCode}}</td>
+        <td>{{c.lat}}</td>
+        <td>{{c.lon}}</td>
+        <td>{{c.cases}}</td>
+      </tr>
+    </tbody>
+  </table>
+  

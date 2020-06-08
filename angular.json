@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "NgComponent"
+    }
+  },
+  "defaultProject": "NgComponent",
+  "cli": {
+    "analytics": false
+  }
 }
