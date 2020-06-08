@@ -4,14 +4,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This is sample demo of component wise developement of project. How to work with component and using it in angular.
     * This project is using covide19 api for implementing services
 
-### Project component has below components
+### Project has below components
 *   filter component
 *   linechart component
 *   piechart component
 *   table component
 *   tabledetails component
 
-Dahsboard component has combination of all above component
+Dahsboard is master component has combination of all above component
 
 ## Development server
 
